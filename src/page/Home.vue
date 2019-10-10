@@ -1,56 +1,41 @@
  <template>
     <div class="home">
-        <Menu></Menu>
-        <router-view></router-view>
+        <Headers></Headers>
+        <div class="container">
+            <Menus></Menus>
+            <router-view></router-view>
+        </div>
+        <Footers></Footers>
     </div>
  </template>
  
  <script>
- import Menu from '../components/Menu'
+ import Menus from '../components/Menu'
+ import Headers from '../components/Header'
+ import Footers from '../components/Footer'
  export default {
      name:"home",
      data: function() {
-         return {
-             currentIndex:0,
-             models:[
-                 "基本信息",
-                 "系统日志",
-                 "崩溃记录",
-                 "Lumberjack",
-                 "网络监控",
-                 "沙盒",
-                 "UI监听",
-                 "埋点"
-             ]
-         }
+        return  {
+            clientHeight:0
+        }
      },
      methods: {
-         menuItemAction: function(index) {
-             switch(index) {
-                 case 0:
-                     this.$router.push({path:"/home/basic"})
-                     break 
-                case 1:
-                    break 
-                case 2:
-                    break 
-                case 3:
-                    break 
-                case 4:
-                    break 
-                case 5:
-                    break 
-                case 6:
-                    break 
-             }
-         }
+        
      },
-     components: [
-         Menu
-     ]
+     components: {
+         Menus,
+         Footers,
+         Headers
+     }
  }
  </script>
- 
+
  <style>
- 
+
+.container {
+    width: 100%;
+    min-height: 400px;
+}
+
  </style>

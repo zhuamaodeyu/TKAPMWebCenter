@@ -2,14 +2,14 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/page/Home.vue'
 
-import NetworkEye from '@/component/content/NetworkEye'
-import Log from '@/component/content/Log'
-import Crash from '@/component/content/Crash'
-import UIMonitor from '@/component/content/UIMonitor'
-import BuriedPoint from '@/component/content/BuriedPoint'
-import SandBox from '@/component/content/SandBox'
-import Lumberjack from '@/component/content/Lumberjack'
-import BasicMessage from '@/component/content/BasicMessage'
+import NetworkEye from '@/components/content/NetworkEye.vue'
+import Log from '@/components/content/Log.vue'
+import Crash from '@/components/content/Crash.vue'
+import UIMonitor from '@/components/content/UIMonitor.vue'
+import BuriedPoint from '@/components/content/BuriedPoint.vue'
+import SandBox from '@/components/content/SandBox.vue'
+import Lumberjack from '@/components/content/Lumberjack.vue'
+import BasicMessage from '@/components/content/BaseMessage.vue'
 
 
 Vue.use(Router)
@@ -17,7 +17,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/basic',
       name: 'home',
       component: Home,
       children: [
